@@ -67,7 +67,7 @@ def find(query, directory, report):
             continue
 
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model=config_dict["model"],
             messages=[
                 {"role": "system",
                  "content": f"""You will receive messages with first line being 
@@ -89,7 +89,6 @@ def find(query, directory, report):
         if answer.lower() == "yes":
             matching_files.append(path)
             click.echo(click.style(match_prefix + str(path), fg="green"))
-
 
     if not report:
         return

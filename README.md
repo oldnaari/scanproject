@@ -6,7 +6,7 @@ This is a tool that can help you scan projects to find code segments that are re
 ## Installation
 
 ```shell
-pip install git+ssh://git@gitlab.com/daniil.hayrapetyan/scanproject.git
+pip install git+ssh://git@github.com/oldnaari/scanproject.git
 ```
 
 After installing with pip please provide the API key as 
@@ -19,6 +19,10 @@ By default, this tools uses `gpt-3.5-turbo` you can switch to gpt-4 with command
 ```shell
 scanproject activate --model gpt-4
 ```
+
+## Motivation
+
+Working with external, not documented frameworks can be a huge bottleneck. This tool accelerates the process of looking for codes that are designed to provide specific functionality.
 
 ## Examples
 
